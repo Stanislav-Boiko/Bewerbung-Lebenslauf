@@ -4,28 +4,27 @@ import "./App.css";
 function App() {
     const [currentPage, setCurrentPage] = useState("bewerbung");
     const [showCertificate, setShowCertificate] = useState(false);
+    const [showDanitCert, setShowDanitCert] = useState(false);
 
-    // Обробка клавіші Escape для закриття модального вікна
+    // Обробка клавіші Escape для закриття модальних вікон
     useEffect(() => {
         const handleEscapeKey = (event) => {
             if (event.key === "Escape") {
                 setShowCertificate(false);
+                setShowDanitCert(false);
             }
         };
-
-        if (showCertificate) {
+        if (showCertificate || showDanitCert) {
             document.addEventListener("keydown", handleEscapeKey);
-            // Блокування прокрутки фону
             document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "unset";
         }
-
         return () => {
             document.removeEventListener("keydown", handleEscapeKey);
             document.body.style.overflow = "unset";
         };
-    }, [showCertificate]);
+    }, [showCertificate, showDanitCert]);
 
     const BewerbungPage = () => {
         const scrollToSection = (sectionId) => {
@@ -438,6 +437,16 @@ function App() {
                                 Umfassende Ausbildung in modernen
                                 Web-Technologien und Frontend-Entwicklung
                             </p>
+
+                            <img
+                                src="/Zertifikat-DAN.IT-Stanislav-Boiko.png"
+                                alt="DAN.IT Frontend Certificate"
+                                className="certificate-thumb"
+                                title="DAN.IT Frontend Zertifikat anzeigen"
+                                onClick={() => setShowDanitCert(true)}
+                            />
+                            <span className="certificate-thumb-label">DAN.IT Zertifikat</span>
+                            
                             <button
                                 className="project-button"
                                 onClick={() =>
@@ -475,6 +484,7 @@ function App() {
                             >
                                 🚀 Mein Abschlussprojekt ansehen
                             </button>
+                            
                             <p
                                 style={{
                                     marginTop: "0.5rem",
@@ -628,6 +638,31 @@ function App() {
                         <img
                             src="/Zertifikat-DTZ-B1-Stanislav-Boiko.png"
                             alt="Deutsch-Test für Zuwanderer B1 Zertifikat"
+                            className="modal-image"
+                        />
+                    </div>
+                </div>
+            )}
+
+            {/* Модальне вікно для сертифікату DAN.IT */}
+            {showDanitCert && (
+                <div
+                    className="modal-overlay"
+                    onClick={() => setShowDanitCert(false)}
+                >
+                    <div
+                        className="modal-content"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            className="modal-close"
+                            onClick={() => setShowDanitCert(false)}
+                        >
+                            ×
+                        </button>
+                        <img
+                            src="/Zertifikat-DAN.IT-Stanislav-Boiko.png"
+                            alt="DAN.IT Frontend Zertifikat"
                             className="modal-image"
                         />
                     </div>

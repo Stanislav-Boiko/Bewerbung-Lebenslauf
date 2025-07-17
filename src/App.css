@@ -300,6 +300,37 @@ body {
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
+/* Мініатюра сертифікату DAN.IT */
+.certificate-thumb {
+    display: inline-block;
+    vertical-align: middle;
+    width: 90px;
+    height: 68px;
+    margin-left: 0.7rem;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.25);
+    cursor: pointer;
+    border: 2px solid #667eea;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.certificate-thumb:hover {
+    transform: scale(1.07);
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.35);
+}
+
+.certificate-thumb-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #555;
+    margin-left: 0.7rem;
+    margin-top: 0.2rem;
+    font-style: italic;
+    text-align: left;
+    line-height: 1.1;
+}
+
 /* Модальне вікно */
 .modal-overlay {
     position: fixed;
