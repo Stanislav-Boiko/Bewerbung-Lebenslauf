@@ -362,8 +362,7 @@ function App() {
                                     <strong>Name:</strong> Stanislav Boiko
                                 </p>
                                 <p>
-                                    <strong>Geburtsdatum:</strong> 02.02.1999 in
-                                    Odessa
+                                    <strong>Geburtsdatum:</strong> 02.02.1999
                                 </p>
                                 <p>
                                     <strong>Adresse:</strong> 78224 Singen
