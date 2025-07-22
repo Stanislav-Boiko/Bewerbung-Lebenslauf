@@ -532,6 +532,14 @@ function App() {
                                 <p>Styling & Design</p>
                             </div>
                             <div className="skill-item">
+                                <h4>SCSS/Sass</h4>
+                                <p>CSS-Präprozessoren</p>
+                            </div>
+                            <div className="skill-item">
+                                <h4>Responsive Design</h4>
+                                <p>Adaptive Webentwicklung</p>
+                            </div>
+                            <div className="skill-item">
                                 <h4>JavaScript</h4>
                                 <p>Programmierung</p>
                             </div>
