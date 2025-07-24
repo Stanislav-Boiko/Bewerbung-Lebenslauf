@@ -57,7 +57,7 @@ function App() {
                         onClick={() => scrollToSection("background")}
                     >
                         <h4>Hintergrund & Kenntnisse</h4>
-                        <p>2,5 Jahre IT-Entwicklung und erworbene Fähigkeiten</p>
+                        <p>2 Jahre IT-Entwicklung und erworbene Fähigkeiten</p>
                     </div>
                     <div
                         className="sidebar-item clickable"
